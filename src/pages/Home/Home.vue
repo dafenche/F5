@@ -1,11 +1,15 @@
 <template>
   <div>
-     Home
+    <router-view></router-view>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+import Baby from "./Baby/baby";
   export default {
+    components:{
+      Baby,
+    }
   }
 </script>
 

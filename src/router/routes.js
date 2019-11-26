@@ -4,11 +4,17 @@ import Group from "../pages/Group/Group.vue"
 import Personal from "../pages/Personal/Personal.vue";
 import ShopCart from "../pages/ShopCart/ShopCart.vue";
 import Classify from "../pages/Classify/Classify.vue";
-
+import Baby from "../pages/Home/Baby/baby.vue";
 export default [
   {
     path:'/home',
-    component:Home
+    component:Home,
+    children:[
+      {
+        path:'/home/baby',
+        component:Baby 
+      }
+    ]  
   },
   {
     path:'/login',
@@ -30,8 +36,10 @@ export default [
     path:'/classify',
     component:Classify
   },
+  
+  // 重定向
   {
     path:'/',
-    redirect:'/home'
+    redirect:'/home/baby'
   }
 ]
