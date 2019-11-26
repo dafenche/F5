@@ -5,10 +5,16 @@ import Personal from "../pages/Personal/Personal.vue";
 import ShopCart from "../pages/ShopCart/ShopCart.vue";
 import Classify from "../pages/Classify/Classify.vue";
 
+import Detail from "../pages/Detail/Detail.vue";
+
+
 export default [
   {
     path:'/home',
-    component:Home
+    component:Home,
+    meta: {
+      isShowFooterGuide:true
+    }
   },
   {
     path:'/login',
@@ -16,7 +22,14 @@ export default [
   },
   {
     path:'/group',
-    component:Group
+    component:Group,
+    children: [
+      {
+        path: '/group/detail/',
+        component: Detail
+      },
+
+    ]
   },
   {
     path:'/personal',
@@ -32,6 +45,10 @@ export default [
   },
   {
     path:'/',
-    redirect:'/home'
-  }
+    redirect:'/group/detail/'
+  },
+
+  
+
+
 ]
