@@ -1,6 +1,6 @@
 <template>
-  <div class="XQContainer">
-    test
+  <div>
+      详情页
   </div>
 </template>
 
@@ -11,7 +11,5 @@
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 
-
-
-
+ 
 </style>

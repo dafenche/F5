@@ -39,8 +39,13 @@
         </div>
         <!--分类区  -->
         <ul class="fenlei">
+          <li class="List" @click="ToGoXL">
+            <img
+              src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
+            />
+            <p>宝宝奶粉</p>
+          </li>
           <li class="List">
-            <div></div>
             <img
               src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
               alt
@@ -48,7 +53,6 @@
             <p>宝宝奶粉</p>
           </li>
           <li class="List">
-            <div></div>
             <img
               src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
               alt
@@ -56,7 +60,6 @@
             <p>宝宝奶粉</p>
           </li>
           <li class="List">
-            <div></div>
             <img
               src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
               alt
@@ -64,7 +67,6 @@
             <p>宝宝奶粉</p>
           </li>
           <li class="List">
-            <div></div>
             <img
               src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
               alt
@@ -72,7 +74,6 @@
             <p>宝宝奶粉</p>
           </li>
           <li class="List">
-            <div></div>
             <img
               src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
               alt
@@ -80,15 +81,6 @@
             <p>宝宝奶粉</p>
           </li>
           <li class="List">
-            <div></div>
-            <img
-              src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
-              alt
-            />
-            <p>宝宝奶粉</p>
-          </li>
-          <li class="List">
-            <div></div>
             <img
               src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
               alt
@@ -163,7 +155,7 @@
         <div class="jxpp">
           <div class="top">
             <span>|</span>
-            <p>活动专区</p>
+            <p>精选品牌</p>
           </div>
           <div class="bottom2">
             <ul>
@@ -265,10 +257,10 @@
           </div>
         </div>
 
-        <!--精选推荐 和下方展示区 -->
-        <div class="jxtj">
+        <!--热门推荐 和下方展示区 -->
+        <div class="rmtj">
           <span>|</span>
-          <p>活动专区</p>
+          <p>热门推荐</p>
         </div>
         <ul class="ShowList">
           <li class="List">
@@ -421,6 +413,7 @@ export default {
     this.$nextTick(() => {
         (this.scroll = new BScroll(this.$refs.wrapperUl1, {
           scrollX: true
+          
         })),
           /* 展示区滑动图 */
           (this.scroll = new BScroll(this.$refs.wrapperUl2, {
@@ -430,7 +423,13 @@ export default {
             scrollY: true
           }));
       });
-  }
+  },
+  methods: {
+    ToGoXL(){
+       console.log(123)
+      this.$router.push('/home/xiaoLiang')
+    }
+  },
 }
 </script>
 
@@ -457,7 +456,7 @@ export default {
         font-size 16px
 /* 所有滑动内容区 */
 .haoahao 
-  height 100%
+  width 100%
 /* 轮播图 */
   .swiper-container 
     width 375px
@@ -515,17 +514,17 @@ export default {
   /* 口碑精选下的滑动图 */
   .wrapper
     width 375px
-    height 190px
+    height 200px
     overflow hidden
     display flex
-    background #fff
-    margin-bottom 10px;
+    border-bottom 10px solid #f5f5f5
     .Content
       width 100%
       height 190px
       display flex
       flex-wrap nowrap
       padding-left 2px
+      background #fff
       .list
         width 120px
         box-sizing border-box
@@ -545,11 +544,10 @@ export default {
           margin-top 20px
  /* 活动专区 */
   .HDZQ
-    width 375px
     height 190px
     background #fff
     padding 10px
-    margin-bottom 10px
+    border-bottom 10px solid #f5f5f5
     .top
       width 100%
       height 40px
@@ -575,11 +573,10 @@ export default {
         margin-top 15px
 /* 精选品牌 */
   .jxpp
-    width 375px
     height 210px
     background #fff
     padding 10px
-    margin-bottom 10px
+    border-bottom 12px solid #f5f5f5
     .top
       width 100%
       height 40px
@@ -596,8 +593,8 @@ export default {
         font-size 16px
         font-weight 700
     .bottom2
-      width 100%
       height 170px
+      width 100vw
       ul
         width 100%
         height 100%
@@ -660,8 +657,8 @@ export default {
               display block
               text-align center
               margin-top 16px
-  /* 精选推荐 */
-  .jxtj
+  /* 热门推荐 */
+  .rmtj
     width 100%
     height 40px
     margin-top 10px
