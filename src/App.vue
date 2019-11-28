@@ -13,8 +13,8 @@ import FooterGuide from "./components/FooterGuide/FooterGuide";
   }
 </script>
 
-<style scoped lang='stylus' rel='stylesheet/stylus'>
-  #app 
+<style lang='stylus' rel='stylesheet/stylus'>
+  #App 
    width 100%
    height 100%
   

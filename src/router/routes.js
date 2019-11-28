@@ -1,10 +1,13 @@
 import Login from '../pages/Login/Login.vue'
-import Home from "../pages/Home/Home.vue";
+import Home from "../pages/Home/Home.vue"
 import Group from "../pages/Group/Group.vue"
 import Personal from "../pages/Personal/Personal.vue";
 import ShopCart from "../pages/ShopCart/ShopCart.vue";
 import Classify from "../pages/Classify/Classify.vue";
 import ClassifyItem from "../pages/ClassifyItem/ClassifyItem.vue";
+
+import Baby from "../pages/Home/Baby/baby.vue"
+import XiaoLiang from "../pages/Home/XiaoLiang/xiaoliang.vue"
 
 export default [
   {
@@ -13,6 +16,10 @@ export default [
     meta:{
       isFooter:true
     }
+  },
+  {
+    path:'/home/xiaoLiang',
+    component:XiaoLiang
   },
   {
     path:'/login',
@@ -46,6 +53,10 @@ export default [
   {
     path:'/classifyitem',
     component:ClassifyItem
+  },
+  {
+    path:'/baby',
+    component:Baby
   },
   {
     path:'/',
