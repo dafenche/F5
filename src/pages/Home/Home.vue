@@ -7,6 +7,8 @@
 import Baby from "./Baby/baby"
 import XiaoLiang from "../Home/XiaoLiang/xiaoliang";
   export default {
+    
+
   }
 </script>
 

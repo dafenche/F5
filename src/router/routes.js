@@ -13,7 +13,10 @@ export default [
   },
   {
     path:'/home/baby',
-    component:Baby 
+    component:Baby,
+    meta:{
+      isShowFooterGuide:false
+    }
   },
   {
     path:'/home/xiaoLiang',

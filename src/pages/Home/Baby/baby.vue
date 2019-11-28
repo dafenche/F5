@@ -21,15 +21,9 @@
         <!-- 轮播图 -->
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide" v-for="(item,index) in babyDatas.lbt" :key="index">
               <img
-                src="https://timgs-v1.tongtongmall.com/9a95a5906f194a8683e4c0f3e02444b1?imageView2/4/quality/30"
-                alt
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://timgs-v1.tongtongmall.com/9a95a5906f194a8683e4c0f3e02444b1?imageView2/4/quality/30"
+                :src="item.pic"
                 alt
               />
             </div>
@@ -39,61 +33,11 @@
         </div>
         <!--分类区  -->
         <ul class="fenlei">
-          <li class="List" @click="ToGoXL">
+          <li class="List" @click="ToGoXL" v-for="(item,index) in babyDatas.fenlei" :key="index">
             <img
-              src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
+              :src="item.pic"
             />
-            <p>宝宝奶粉</p>
-          </li>
-          <li class="List">
-            <img
-              src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
-              alt
-            />
-            <p>宝宝奶粉</p>
-          </li>
-          <li class="List">
-            <img
-              src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
-              alt
-            />
-            <p>宝宝奶粉</p>
-          </li>
-          <li class="List">
-            <img
-              src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
-              alt
-            />
-            <p>宝宝奶粉</p>
-          </li>
-          <li class="List">
-            <img
-              src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
-              alt
-            />
-            <p>宝宝奶粉</p>
-          </li>
-          <li class="List">
-            <img
-              src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
-              alt
-            />
-            <p>宝宝奶粉</p>
-          </li>
-          <li class="List">
-            <img
-              src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
-              alt
-            />
-            <p>宝宝奶粉</p>
-          </li>
-          <li class="List">
-            <div></div>
-            <img
-              src="https://timgs-v1.tongtongmall.com/2cd3d772e84a4081b83b8c49980f7a54?imageView2/4/quality/30"
-              alt
-            />
-            <p>宝宝奶粉</p>
+            <p>{{item.title}}</p>
           </li>
         </ul>
         <!-- 口碑精选 -->
@@ -104,37 +48,13 @@
         <!-- 口碑精选下的滑动图-->
         <div class="wrapper" ref="wrapperUl1">
           <ul class="Content">
-            <li class="list">
+            <li class="list" v-for="(item,index) in babyDatas.kbjx" :key="index">
               <img
-                src="https://timgs-v1.tongtongmall.com/5c931b6d146542c7b28b7442b8d6a513?imageView2/4/quality/30"
+                :src="item.pic"
                 alt
               />
-              <p>美国嘉宝婴儿辅食1段DHA高铁大米米粉宝宝米糊钙铁锌227g</p>
-              <span class="Money">$56.00</span>
-            </li>
-            <li class="list">
-              <img
-                src="https://timgs-v1.tongtongmall.com/5c931b6d146542c7b28b7442b8d6a513?imageView2/4/quality/30"
-                alt
-              />
-              <p>美国嘉宝婴儿辅食1段DHA高铁大米米粉宝宝米糊钙铁锌227g</p>
-              <span class="Money">$56.00</span>
-            </li>
-            <li class="list">
-              <img
-                src="https://timgs-v1.tongtongmall.com/5c931b6d146542c7b28b7442b8d6a513?imageView2/4/quality/30"
-                alt
-              />
-              <p>美国嘉宝婴儿辅食1段DHA高铁大米米粉宝宝米糊钙铁锌227g</p>
-              <span class="Money">$56.00</span>
-            </li>
-            <li class="list">
-              <img
-                src="https://timgs-v1.tongtongmall.com/5c931b6d146542c7b28b7442b8d6a513?imageView2/4/quality/30"
-                alt
-              />
-              <p>美国嘉宝婴儿辅食1段DHA高铁大米米粉宝宝米糊钙铁锌227g</p>
-              <span class="Money">$56.00</span>
+              <p>{{item.title}}</p>
+              <span class="Money">${{item.sellprice}}</span>
             </li>
           </ul>
         </div>
@@ -144,13 +64,13 @@
             <span>|</span>
             <p>活动专区</p>
           </div>
-          <div class="bottom">
+          <div class="bottom" v-for="(item,index) in babyDatas.hdzq" :key="index">
             <img
-              src="https://timgs-v1.tongtongmall.com/7ea3aab1c2ef4d1aa7466923079ec79c?imageView2/4/quality/30"
+              :src="item.pic"
               alt
             />
           </div>
-        </div>
+        </div>item
         <!-- 精选品牌 -->
         <div class="jxpp">
           <div class="top">
@@ -159,51 +79,9 @@
           </div>
           <div class="bottom2">
             <ul>
-              <li>
+              <li v-for="(item,index) in babyDatas.jxpp" :key="index">
                 <img
-                  src="https://timgs-v1.tongtongmall.com/0c7bd5a88f3b44feb90822b523b0272d?imageView2/4/quality/30"
-                  alt
-                />
-              </li>
-              <li>
-                <img
-                  src="https://timgs-v1.tongtongmall.com/0c7bd5a88f3b44feb90822b523b0272d?imageView2/4/quality/30"
-                  alt
-                />
-              </li>
-              <li>
-                <img
-                  src="https://timgs-v1.tongtongmall.com/0c7bd5a88f3b44feb90822b523b0272d?imageView2/4/quality/30"
-                  alt
-                />
-              </li>
-              <li>
-                <img
-                  src="https://timgs-v1.tongtongmall.com/0c7bd5a88f3b44feb90822b523b0272d?imageView2/4/quality/30"
-                  alt
-                />
-              </li>
-              <li>
-                <img
-                  src="https://timgs-v1.tongtongmall.com/0c7bd5a88f3b44feb90822b523b0272d?imageView2/4/quality/30"
-                  alt
-                />
-              </li>
-              <li>
-                <img
-                  src="https://timgs-v1.tongtongmall.com/0c7bd5a88f3b44feb90822b523b0272d?imageView2/4/quality/30"
-                  alt
-                />
-              </li>
-              <li>
-                <img
-                  src="https://timgs-v1.tongtongmall.com/0c7bd5a88f3b44feb90822b523b0272d?imageView2/4/quality/30"
-                  alt
-                />
-              </li>
-              <li>
-                <img
-                  src="https://timgs-v1.tongtongmall.com/0c7bd5a88f3b44feb90822b523b0272d?imageView2/4/quality/30"
+                  :src="item.pic"
                   alt
                 />
               </li>
@@ -212,45 +90,22 @@
         </div>
         <!--大的展示区 ：图片+ 滑动区 -->
         <div class="BigShow">
-          <div class="top1">
+          <div class="top1" v-for="(item,index) in babyDatas.datu" :key="index"> 
             <img
-              src="https://timgs-v1.tongtongmall.com/1823fe340cd0490c9ce098187ea23e87?imageView2/4/quality/30"
+              :src="item.pic"
               alt
             />
           </div>
           <div class="bottom1">
             <div class="wrapper" ref="wrapperUl2">
               <ul class="Content">
-                <li class="list">
+                <li class="list" v-for="(item,index) in babyDatas.datuhuadong" :key="index">
                   <img
-                    src="https://timgs-v1.tongtongmall.com/5c931b6d146542c7b28b7442b8d6a513?imageView2/4/quality/30"
+                    :src="item.pic"
                     alt
                   />
-                  <p>美国嘉宝婴儿辅食1段DHA高铁大米米粉宝宝米糊钙铁锌227g</p>
-                  <span class="Money">$56.00</span>
-                </li>
-                <li class="list">
-                  <img
-                    src="https://timgs-v1.tongtongmall.com/5c931b6d146542c7b28b7442b8d6a513?imageView2/4/quality/30"
-                    alt
-                  />
-                  <p>美国嘉宝婴儿辅食1段DHA高铁大米米粉宝宝米糊钙铁锌227g</p>
-                  <span class="Money">$56.00</span>
-                </li>
-                <li class="list">
-                  <img
-                    src="https://timgs-v1.tongtongmall.com/5c931b6d146542c7b28b7442b8d6a513?imageView2/4/quality/30"
-                    alt
-                  />
-                  <p>美国嘉宝婴儿辅食1段DHA高铁大米米粉宝宝米糊钙铁锌227g</p>
-                  <span class="Money">$56.00</span>
-                </li>
-                <li class="list">
-                  <img
-                    class="img4"
-                    src="https://timgs-v1.tongtongmall.com/8de8f9dafbda499b91c611177fa90ba3?imageView2/4/quality/30"
-                    alt
-                  />
+                  <p>{{item.title}}</p>
+                  <span class="Money">${{item.sellprice}}</span>
                 </li>
               </ul>
             </div>
@@ -263,125 +118,20 @@
           <p>热门推荐</p>
         </div>
         <ul class="ShowList">
-          <li class="List">
+          <li class="List" v-for="(item,index) in babyDatas.rmtj" :key="index">
             <a>
               <div class="imgContainer">
                 <img
-                  src="https://timgs-v1.tongtongmall.com/f7617066e02546a2a20fc4d56baaa2c1?imageView2/4/quality/30"
+                  :src="item.pic"
                   alt
                 />
               </div>
-              <p>澳洲爱他美3段</p>
+              <p>{{item.title}}</p>
               <div class="money">
                 <span class="Q">￥</span>
-                <span class="now">436.00</span>
+                <span class="now">{{item.sellprice}}</span>
                 <del>
-                  <span class="brfore">￥499.00</span>
-                </del>
-                <div class="shopcar">
-                  <i class="iconfont icongouwuchekong"></i>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="List">
-            <a>
-              <div class="imgContainer">
-                <img
-                  src="https://timgs-v1.tongtongmall.com/f7617066e02546a2a20fc4d56baaa2c1?imageView2/4/quality/30"
-                  alt
-                />
-              </div>
-              <p>澳洲爱他美3段</p>
-              <div class="money">
-                <span class="Q">￥</span>
-                <span class="now">436.00</span>
-                <del>
-                  <span class="brfore">￥499.00</span>
-                </del>
-                <div class="shopcar">
-                  <i class="iconfont icongouwuchekong"></i>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="List">
-            <a>
-              <div class="imgContainer">
-                <img
-                  src="https://timgs-v1.tongtongmall.com/f7617066e02546a2a20fc4d56baaa2c1?imageView2/4/quality/30"
-                  alt
-                />
-              </div>
-              <p>澳洲爱他美3段</p>
-              <div class="money">
-                <span class="Q">￥</span>
-                <span class="now">436.00</span>
-                <del>
-                  <span class="brfore">￥499.00</span>
-                </del>
-                <div class="shopcar">
-                  <i class="iconfont icongouwuchekong"></i>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="List">
-            <a>
-              <div class="imgContainer">
-                <img
-                  src="https://timgs-v1.tongtongmall.com/f7617066e02546a2a20fc4d56baaa2c1?imageView2/4/quality/30"
-                  alt
-                />
-              </div>
-              <p>澳洲爱他美3段</p>
-              <div class="money">
-                <span class="Q">￥</span>
-                <span class="now">436.00</span>
-                <del>
-                  <span class="brfore">￥499.00</span>
-                </del>
-                <div class="shopcar">
-                  <i class="iconfont icongouwuchekong"></i>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="List">
-            <a>
-              <div class="imgContainer">
-                <img
-                  src="https://timgs-v1.tongtongmall.com/f7617066e02546a2a20fc4d56baaa2c1?imageView2/4/quality/30"
-                  alt
-                />
-              </div>
-              <p>澳洲爱他美3段</p>
-              <div class="money">
-                <span class="Q">￥</span>
-                <span class="now">436.00</span>
-                <del>
-                  <span class="brfore">￥499.00</span>
-                </del>
-                <div class="shopcar">
-                  <i class="iconfont icongouwuchekong"></i>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="List">
-            <a>
-              <div class="imgContainer">
-                <img
-                  src="https://timgs-v1.tongtongmall.com/f7617066e02546a2a20fc4d56baaa2c1?imageView2/4/quality/30"
-                  alt
-                />
-              </div>
-              <p>澳洲爱他美3段</p>
-              <div class="money">
-                <span class="Q">￥</span>
-                <span class="now">436.00</span>
-                <del>
-                  <span class="brfore">￥499.00</span>
+                  <span class="brfore">￥{{item.originalprice}}</span>
                 </del>
                 <div class="shopcar">
                   <i class="iconfont icongouwuchekong"></i>
@@ -396,40 +146,82 @@
 </template>
 
 <script type="text/ecmascript-6">
-import Swiper from "swiper";
-import "swiper/css/swiper.min.css";
-import BScroll from "better-scroll";
+import Swiper from "swiper"
+import "swiper/css/swiper.min.css"
+import BScroll from "better-scroll"
+import Vue from 'vue'
+import { mapState } from "vuex";
 export default {
   mounted() {
-    // 轮播图
-    new Swiper(".swiper-container", {
-      pagination: {
-        el: ".swiper-pagination" //分页面器
-      },
-      loop: true, // 无缝滚动
-      autoplay: true //自动 切换
-    }),
+  
     /* 口碑精选下面的轮播图 */
     this.$nextTick(() => {
-        (this.scroll = new BScroll(this.$refs.wrapperUl1, {
+        this.scroll = new BScroll(this.$refs.wrapperUl1, {
           scrollX: true
           
-        })),
+        })
           /* 展示区滑动图 */
-          (this.scroll = new BScroll(this.$refs.wrapperUl2, {
-            scrollX: true
-          })),
-          (this.scrollContent = new BScroll(this.$refs.conent, {
-            scrollY: true
-          }));
+        this.scroll = new BScroll(this.$refs.wrapperUl2, {
+          scrollX: true
+        })
+        // (this.scrollContent = new BScroll(this.$refs.conent, {
+        //   scrollY: true
+        // }))
       });
-  },
+
+      
+
+
+  // 页面挂载后发请求更新页面数据
+    this.$store.dispatch('getbabyAction')
+
+  }, 
   methods: {
+    // 跳转到详情页
     ToGoXL(){
        console.log(123)
       this.$router.push('/home/xiaoLiang')
+    },
+    _swiper(){
+      new Swiper(".swiper-container", {
+            pagination: {
+              el: ".swiper-pagination" //分页面器
+            },
+            loop: true, // 无缝滚动
+            autoplay: true //自动 切换
+       })
+    },
+    _scroll(){
+      this.scrollContent = new BScroll(this.$refs.conent, {
+          scrollY: true
+      })
     }
   },
+  
+  // 解决轮播图数据回来时页面不显示的问题
+  watch: {
+      babyDatas(){
+        this.$nextTick(()=>{
+          this._swiper()
+          this._scroll()
+      })
+    }
+},
+
+
+
+  computed: {
+    ...mapState({
+      babyDatas: state => state.babyDatas
+    })
+  },
+
+
+
+
+
+
+
 }
 </script>
 
@@ -457,6 +249,8 @@ export default {
 /* 所有滑动内容区 */
 .haoahao 
   width 100%
+  height calc(100vh - 98px)
+
 /* 轮播图 */
   .swiper-container 
     width 375px
@@ -514,13 +308,13 @@ export default {
   /* 口碑精选下的滑动图 */
   .wrapper
     width 375px
-    height 200px
+    height 180px
     overflow hidden
     display flex
     border-bottom 10px solid #f5f5f5
     .Content
       width 100%
-      height 190px
+      height 180px
       display flex
       flex-wrap nowrap
       padding-left 2px
@@ -531,17 +325,21 @@ export default {
         img 
           width 100px
           height 100px
+          margin-bottom 5px
         p
           font-size 12px
           width 120px
           height 30px
           vertical-align baseline
+          text-overflow ellipsis
+          overflow hidden
+          white-space nowrap
         span
           color red
           font-size 14px
           display block
           text-align center
-          margin-top 20px
+          margin-top 15px
  /* 活动专区 */
   .HDZQ
     height 190px
@@ -683,7 +481,7 @@ export default {
     flex-wrap wrap
     .List 
       width 185px
-      height 270px
+      height 280px
       background #fff
       border 1px solid #f5f5f5
       .imgContainer
@@ -695,12 +493,12 @@ export default {
       p 
         font-size 14px
         width 165px
-        height 38px
+        height 45px
         padding 5px 10px 0
         color black
       .money 
         width 165px
-        height 20px
+        height 18px
         padding-left 5px
         position relative
         .Q 
