@@ -43,10 +43,10 @@ export default [
     path:'/classify',
     component:Classify
   },
-  {
-    path:'/',
-    redirect:'/group/detail/'
-  },
+  // {
+  //   path:'/',
+  //   redirect:'/group/detail/'
+  // },
 
   
 

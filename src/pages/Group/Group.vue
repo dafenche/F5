@@ -2,9 +2,11 @@
   <div id="groupsContainer">
     <div class="group-center" v-if="$route.path === '/group'">
       <header class="header">
-        <i class="return">回退</i>
+        <i class="return"><van-icon name="arrow-left"  style="font-size:16px;" /></i>
+        
         <h1 class="title">拼团中心</h1>
-        <i class="home">回退2</i>
+        <i class="home"><van-icon name="description" style="font-size:16px;" /></i>
+        
       </header>
 
       <div class="content-container">
@@ -12,26 +14,26 @@
           <img src="../../common/images/groups/879847edd93245d48c72f1d0ef272d9a.jpg" alt />
         </div>
 
-        <ul>
-          <li @click="goPath('/group/detail')">
+        <ul v-if="groups.data">
+          <li @click="goPath('/group/detail')"  v-for="(group,index) in groups.data.list" :key="index">
             <div class="left">
-              <img src="../../common/images/groups/ximiannai.jpg" alt="">
+              <img :src="`${group.goodsurl}`" alt="">
             </div>
             <div class="right">
-              <p class="name">韩国AHC B5玻尿酸水乳液洁面精华套盒</p>
-              <p class="des">作为护肤界的新晋网红，玻尿酸系列非常有实力,平价好用~</p>
+              <p class="name">{{group.goodsname}}</p>
+              <p class="des">{{group.goodsdesc}}</p>
               <div class="price">
                 <p>
-                  <span class>2人团</span>
+                  <span class>{{group.grouplabel}}</span>
                   <span class>
                     "$"
-                    <i>459.</i>
-                    "00"
+                    <i>{{group.groupprice}}</i>
+                   
                   </span>
 
                   <span class="buyOnly">
                     单买价"$"
-                    <i>498.00.</i>
+                    <i>{{group.purchasenum}}</i>
                   </span>
                 </p>
               </div>
@@ -56,11 +58,30 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   methods:{
     goPath(path){
        this.$router.push(path)
     }
+  },
+  mounted(){
+    this.$store.dispatch('getGroupsAction')
+
+
+
+      // this.$store.dispatch('getAddressAction')
+
+  },
+  computed : {
+    ...mapState({
+
+
+
+      groups: state => state.groups, 
+    })
+
+
   }
 };
 </script>
@@ -89,10 +110,14 @@ export default {
       background white
       line-height 48px 
       .return
+         font-size 16px
       h1
         width 283px
         height 21px
+        font-size 16px
+        margin-left 150px
       .home
+         font-size 16px
 
         width 44px
         height 26px 

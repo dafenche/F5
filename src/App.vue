@@ -7,6 +7,7 @@
 
 <script type="text/ecmascript-6">
 import FooterGuide from "./components/FooterGuide/FooterGuide";
+// import Test from './test'
   export default {
     components:{FooterGuide}
       

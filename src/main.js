@@ -6,6 +6,7 @@ import { Icon } from "vant"
 import BScroll from 'better-scroll'
 import Swiper from "swiper" 
 import 'swiper/css/swiper.min.css' 
+import store from './store'
 
 
 
@@ -16,5 +17,6 @@ Vue.config.productionTip = false
 new Vue({
   components:{App},
   template: '<App/>',
-  router
+  router,
+  store
 }).$mount('#app')
