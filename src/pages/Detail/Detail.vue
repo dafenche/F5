@@ -1,6 +1,6 @@
 <template>
   <div id="detailContainer">
-    <div>
+    <div style=" height: 48px">
       <header class="header">
         <i class="return">
           <van-icon name="arrow-left" @click="boBack('/group')" />
@@ -239,10 +239,10 @@ export default {
       autoplay: true //可选选项，自动滑动
     });
 
-    // let scroll = new BScroll('.recommendShopsUlContainer',{
-    // scrollX: true,
-    // click: true,
-    // })
+    let scroll = new BScroll('.recommendShopsUlContainer',{
+    scrollX: true,
+    click: true,
+    })
   },
 
   computed: {
@@ -261,7 +261,7 @@ export default {
   // overflow hidden
   div 
     // display flex
-    height: 48px;
+    
     overflow: hidden;
 
     .header 
@@ -340,156 +340,159 @@ export default {
       
     
   
+  div
+    height 200px
+    .detailContainer-bottom 
+      width: 375px;
+      height: 186px;
+      display: block;
 
-  .detailContainer-bottom 
-    width: 375px;
-    height: 186px;
-    display: block;
+      .GroupsBooking 
+        margin: 0 auto;
+        width: 348px;
+        height: 24px;
+        line-height: 24px;
+        // background : url (https://timgs-v1.tongtongmall.com/675070) no-repeat
+        background-size: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: url('https://timgs-v1.tongtongmall.com/675070');
 
-    .GroupsBooking 
-      margin: 0 auto;
-      width: 348px;
-      height: 24px;
-      line-height: 24px;
-      // background : url (https://timgs-v1.tongtongmall.com/675070) no-repeat
-      background-size: 100%;
-      display: flex;
-      justify-content: space-between;
-      background: url('https://timgs-v1.tongtongmall.com/675070');
-
-      span:nth-child(1) 
-        color: white;
-        font-size: 10px;
-      
-
-      span:nth-child(2) 
-        color: white;
-        font-size: 10px;
-      
-    
-
-    .price 
-      width: 348px;
-      height: 36px;
-      margin: 0 auto;
-      background: white;
-      display: flex;
-      justify-content: space-between;
-      line-height: 36px;
-
-      span 
-        color: red;
-        font-size: 10px;
-      
-    
-
-    .groups_des 
-      width: 345px;
-      height: 53px;
-      margin: 0 auto;
-
-      p 
-        width: 345px;
-        height: 21px;
-        font-size: 14px;
-        color: #090909;
-        margin-top: 5px;
-      
-
-      p:nth-child(2) 
-        width: 345px;
-        height: 17px;
-        font-size: 10px;
-        color: #646464;
-      
-    
-
-    .groups_fn 
-      width: 345px;
-      height: 34px;
-      border-radius: 20px;
-      background: #FCD6D6;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      line-height: 34px;
-      margin-bottom: 10px;
-
-      p:nth-child(1) 
-        margin-left: 5px;
-      
-
-      p:nth-child(1) 
-        margin-right: 5px;
-      
-    
-
-    .groups_receipt 
-      width: 345px;
-      height: 30px;
-      margin: 0 auto;
-      font-size: 12px;
-      display: flex;
-      border-bottom: 6px solid #f3f3f3;
-
-      p:nth-child(1) 
-        margin-right: 12px;
-      
-    
-  
-
-  .brand 
-    width: 375px;
-    height: 176px;
-
-    .country 
-      width: 345px;
-      height: 60px;
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #9a9a9a;
-      margin: 0 auto;
-
-      img 
-        width: 60px;
-        height: 60px;
-      
-
-      .country-detail 
-        width: 65px;
-        height: 60px;
-        margin-top: 12px;
-
-        div 
-          margin-bottom: 12px;
-          width: 65px;
-          height: 22px;
-
-          img 
-            width: 19px;
-            height: 14px;
-          
+        span:nth-child(1) 
+          color: white;
+          font-size: 10px;
         
+
+        span:nth-child(2) 
+          color: white;
+          font-size: 10px;
+        
+      
+
+      .price 
+        width: 348px;
+        height: 36px;
+        margin: 0 auto;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        line-height: 36px;
+
+        span 
+          color: red;
+          font-size: 10px;
+        
+      
+
+      .groups_des 
+        width: 345px;
+        height: 53px;
+        margin: 0 auto;
 
         p 
+          width: 345px;
+          height: 21px;
           font-size: 14px;
-          width: 66px;
-          height: 34px;
-          margin-top: 10px;
+          color: #090909;
+          margin-top: 5px;
+        
+
+        p:nth-child(2) 
+          width: 345px;
+          height: 17px;
+          font-size: 10px;
+          color: #646464;
+        
+      
+
+      .groups_fn 
+        width: 345px;
+        height: 34px;
+        border-radius: 20px;
+        background: #FCD6D6;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        line-height: 34px;
+        margin-bottom: 10px;
+
+        p:nth-child(1) 
+          margin-left: 5px;
+        
+
+        p:nth-child(1) 
+          margin-right: 5px;
+        
+      
+
+      .groups_receipt 
+        width: 345px;
+        height: 30px;
+        margin: 0 auto;
+        font-size: 12px;
+        display: flex;
+        border-bottom: 6px solid #f3f3f3;
+
+        p:nth-child(1) 
+          margin-right: 12px;
         
       
     
 
-    .belonGto 
-      width: 345px;
-      height: 79px;
-      font-size: 12px;
-      color: #9a9a9a;
-      margin: 0 auto;
-      margin-top: 16px;
-      border-bottom: 6px solid #9a9a9a;
+    .brand 
+      width: 375px;
+      height: 176px;
+
+      .country 
+        width: 345px;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #9a9a9a;
+        margin: 0 auto;
+
+        img 
+          width: 60px;
+          height: 60px;
+        
+
+        .country-detail 
+          width: 65px;
+          height: 60px;
+          margin-top: 12px;
+
+          div 
+            margin-bottom: 12px;
+            width: 65px;
+            height: 22px;
+
+            img 
+              width: 19px;
+              height: 14px;
+            
+          
+
+          p 
+            font-size: 14px;
+            width: 66px;
+            height: 34px;
+            margin-top: 10px;
+          
+        
+      
+
+      .belonGto 
+        width: 345px;
+        height: 79px;
+        font-size: 12px;
+        color: #9a9a9a;
+        margin: 0 auto;
+        margin-top: 16px;
+        border-bottom: 6px solid #9a9a9a;
+      
     
-  
+
+
 
   .footer 
     width: 375px;
