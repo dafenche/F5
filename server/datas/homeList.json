@@ -1,0 +1,148 @@
+{
+  "code": 1100,
+  "msg": "成功",
+  "data": {
+  "showlist": [],
+  "adlist": [ 
+  {
+  "picurl": "https://timgs-v1.tongtongmall.com/b44494245027420492a1a0401434ea0c?imageView2/4/quality/30",
+  "sort": "1",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/topic?topicid=heiwu",
+  "parameter": ""
+  }
+  },
+  {
+  "picurl": "https://timgs-v1.tongtongmall.com/bdeae4822e814aa6af86c2fb43371eda?imageView2/4/quality/30",
+  "sort": "15",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/topic?topicid=yangrou",
+  "parameter": ""
+  }
+  },
+  {
+  "picurl": "https://timgs-v1.tongtongmall.com/72f5ccde1e0542529af51d613e70c75a?imageView2/4/quality/30",
+  "sort": "25",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/topic?topicid=huanjihf",
+  "parameter": ""
+  }
+  },
+  {
+  "picurl": "https://timgs-v1.tongtongmall.com/64597e8eff90417e9489da23330ffc5c?imageView2/4/quality/30",
+  "sort": "30",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/topic?topicid=weijin",
+  "parameter": ""
+  }
+  },
+  {
+  "picurl": "https://timgs-v1.tongtongmall.com/19bf16ef20dd410c9c3e0230802c1473?imageView2/4/quality/30",
+  "sort": "40",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/groups/center",
+  "parameter": ""
+  }
+  },
+  {
+  "picurl": "https://timgs-v1.tongtongmall.com/a7eac45284fa4a8db9f9ec90c2951db2?imageView2/4/quality/30",
+  "sort": "60",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/topic?topicid=yiselie",
+  "parameter": ""
+  }
+  },
+  {
+  "picurl": "https://timgs-v1.tongtongmall.com/5db8b6aefada428ca70037c096d4ce87?imageView2/4/quality/30",
+  "sort": "70",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/user/help/info?id=665e5962-9424-4382-9df3-b2c6b30bc1a2",
+  "parameter": "d0a56f43-2a43-4cf8-8c06-ef9877ff9cc2"
+  }
+  }
+  ],
+  "menulist": [
+  {
+  "icon": "https://timgs-v1.tongtongmall.com/d5e83ec5fe9a4420a80a524a404b8958?imageView2/4/quality/30",
+  "menu": "母婴用品",
+  "sort": "1",
+  "isshow": "1",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/place.html?page=%E6%AF%8D%E5%A9%B4%E5%88%86%E4%BC%9A%E5%9C%BA",
+  "parameter": ""
+  }
+  },
+  {
+  "icon": "https://timgs-v1.tongtongmall.com/94d6bb77bd7d48aab25ea5bfd05d503c?imageView2/4/quality/30",
+  "menu": "美妆护肤",
+  "sort": "2",
+  "isshow": "1",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/place.html?page=%E7%BE%8E%E5%A6%86%E5%88%86%E4%BC%9A%E5%9C%BA",
+  "parameter": ""
+  }
+  },
+  {
+  "icon": "https://timgs-v1.tongtongmall.com/5912b837192945debe514bee875f6bb5?imageView2/4/quality/30",
+  "menu": "居家日化",
+  "sort": "4",
+  "isshow": "1",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/place.html?page=%E6%97%A5%E5%8C%96%E5%88%86%E4%BC%9A%E5%9C%BA",
+  "parameter": "dde41651-4215-4999-8af4-e2629ba538b8"
+  }
+  },
+  {
+  "icon": "https://timgs-v1.tongtongmall.com/3ee1cdf5a823465aa4541a519f1905d2?imageView2/4/quality/30",
+  "menu": "休闲美食",
+  "sort": "5",
+  "isshow": "1",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/topic?topicid=thefoods",
+  "parameter": ""
+  }
+  }
+  ],
+  "noticelist": [
+  {
+  "title": "锡盟大草原，清真好羊肉，点击查看>",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/detail?goodsid=b8e883c0-6134-177f-d5c6-da2056e2d34d",
+  "parameter": ""
+  }
+  },
+  {
+  "title": "国货精选，冬季儿童仿貂绒围巾低至29.9>",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/detail?goodsid=a6d1fd1c-8134-177f-9e72-e0736ad1ceec",
+  "parameter": ""
+  }
+  },
+  {
+  "title": "呼朋唤友拼团啦，一起拼，一起玩>",
+  "link": {
+  "type": "2",
+  "link": "https://m.tongtongmall.com/v/groups/center",
+  "parameter": ""
+  }
+  }
+  ],
+  "adtime": "20191127112507",
+  "menutime": "20191127112507",
+  "noticetime": "20191127112507",
+  "showtime": "20191127112507"
+  }
+}
