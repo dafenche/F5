@@ -257,13 +257,8 @@ export default {
 #detailContainer 
   width: 375px;
   height: 667px;
-
-  // overflow hidden
   div 
-    // display flex
-    
     overflow: hidden;
-
     .header 
       display: flex;
       position: fixed;
@@ -274,7 +269,6 @@ export default {
       width: 375px;
       height: 48px;
       line-height: 48px;
-
       i 
         text-align: center;
         display: block;
@@ -284,38 +278,25 @@ export default {
         font-size: 22px;
         color: #9a9a9a;
         margin: auto 0;
-      
-
       .home 
         margin-left: 60px;
-      
-
       .select 
         display: flex;
         justify-content: space-between;
         width: 225px;
         height: 48px;
-
         .header_tab 
           width: 40px;
           height: 35px;
-          // margin-top: 20px;
           line-height: 35px;
           text-align: center;
           margin: auto 0;
           font-size: 16px;
           margin-left: 30px;
-
           &.on 
             border-bottom: 2px solid red;
             font-weight: 700;
             color: red;
-          
-        
-      
-    
-  
-
   .banner 
     .swiper-container 
       width: 100%;
@@ -331,15 +312,9 @@ export default {
           align-items: flex-start;
           flex-wrap: wrap;
           height: 100%;
-
           img 
             width: 100%;
             height: 100%;
-          
-        
-      
-    
-  
   div
     height 200px
     .detailContainer-bottom 
@@ -352,23 +327,16 @@ export default {
         width: 348px;
         height: 24px;
         line-height: 24px;
-        // background : url (https://timgs-v1.tongtongmall.com/675070) no-repeat
         background-size: 100%;
         display: flex;
         justify-content: space-between;
         background: url('https://timgs-v1.tongtongmall.com/675070');
-
         span:nth-child(1) 
           color: white;
           font-size: 10px;
-        
-
         span:nth-child(2) 
           color: white;
           font-size: 10px;
-        
-      
-
       .price 
         width: 348px;
         height: 36px;
@@ -377,34 +345,24 @@ export default {
         display: flex;
         justify-content: space-between;
         line-height: 36px;
-
         span 
           color: red;
           font-size: 10px;
-        
-      
-
       .groups_des 
         width: 345px;
         height: 53px;
         margin: 0 auto;
-
         p 
           width: 345px;
           height: 21px;
           font-size: 14px;
           color: #090909;
           margin-top: 5px;
-        
-
         p:nth-child(2) 
           width: 345px;
           height: 17px;
           font-size: 10px;
           color: #646464;
-        
-      
-
       .groups_fn 
         width: 345px;
         height: 34px;
@@ -415,16 +373,10 @@ export default {
         justify-content: space-between;
         line-height: 34px;
         margin-bottom: 10px;
-
         p:nth-child(1) 
           margin-left: 5px;
-        
-
         p:nth-child(1) 
           margin-right: 5px;
-        
-      
-
       .groups_receipt 
         width: 345px;
         height: 30px;
@@ -432,17 +384,11 @@ export default {
         font-size: 12px;
         display: flex;
         border-bottom: 6px solid #f3f3f3;
-
         p:nth-child(1) 
           margin-right: 12px;
-        
-      
-    
-
     .brand 
       width: 375px;
       height: 176px;
-
       .country 
         width: 345px;
         height: 60px;
@@ -450,37 +396,25 @@ export default {
         justify-content: space-between;
         border-bottom: 1px solid #9a9a9a;
         margin: 0 auto;
-
         img 
           width: 60px;
           height: 60px;
-        
-
         .country-detail 
           width: 65px;
           height: 60px;
           margin-top: 12px;
-
           div 
             margin-bottom: 12px;
             width: 65px;
             height: 22px;
-
             img 
               width: 19px;
               height: 14px;
-            
-          
-
           p 
             font-size: 14px;
             width: 66px;
             height: 34px;
             margin-top: 10px;
-          
-        
-      
-
       .belonGto 
         width: 345px;
         height: 79px;
@@ -489,10 +423,6 @@ export default {
         margin: 0 auto;
         margin-top: 16px;
         border-bottom: 6px solid #9a9a9a;
-      
-    
-
-
 
   .footer 
     width: 375px;
@@ -507,46 +437,30 @@ export default {
         width: 375px;
         height: 50px;
         line-height: 50px;
-      
-
       .recommendShopsUlContainer 
         width: 375px;
         height: 272px;
         display: flex;
         overflow: hidden;
-
         .recommendShopsUl 
           height: 272px;
-          // margin-left 10px
           display: flex;
           flex-wrap: nowrap;
-
           li 
             width: 128px;
             height: 202px;
-            // flex: 1;
-
             img 
               width: 126px;
               height: 128px;
-            
-
             p 
               width: 126px;
               height: 33px;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
-            
-
+          
             p:nth-child(2) 
               color: red;
-            
-          
-        
-      
-    
-
     .footer-shopCart 
       width: 375px;
       height: 50px;
