@@ -14,9 +14,7 @@ Vue.use(Icon);
 Vue.use(Button);
 
 
-import BScroll from 'better-scroll'
-import Swiper from "swiper" 
-import 'swiper/css/swiper.min.css' 
+import BScroll from 'better-scroll' 
 
 
 
