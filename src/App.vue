@@ -1,7 +1,7 @@
 <template>
-  <div id="#app">
+  <div id="app">
     <router-view></router-view>
-    <FooterGuide /> 
+    <FooterGuide v-if="$route.meta.isFooter"/> 
   </div>
 </template>
 
@@ -17,6 +17,6 @@ import FooterGuide from "./components/FooterGuide/FooterGuide";
   #app 
    width 100%
    height 100%
- 
+  
 </style>
 
