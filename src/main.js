@@ -6,6 +6,10 @@ import 'lib-flexible/flexible'
 import router from './router'
 import { Icon,Tab, Tabs } from "vant";
 import store from "./store";
+import BScroll from 'better-scroll'
+import Swiper from "swiper" 
+import 'swiper/css/swiper.min.css' 
+
 
 
 Vue.use(Icon)
