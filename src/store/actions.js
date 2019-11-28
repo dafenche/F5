@@ -2,13 +2,15 @@
 import { 
   getNavList,
   getProduces,
-  getBaby 
+  getBaby,
+  getSunscreen 
 } from "../api";
 
 import { 
   SAVE_NAVLIST,
   SAVE_PRODUCES,
-  SAVE_BABY
+  SAVE_BABY,
+  SAVE_SUNSCREEN
  } from "./mutations.type";
 
 
@@ -23,6 +25,12 @@ export default {
     let result = await getProduces()
     if(result.data.code===0){
       commit(SAVE_PRODUCES,{produces : result.data})
+    }
+  },
+  async getSunscreenAction({commit}){
+    let result = await getSunscreen()
+    if(result.data.code===0){
+      commit(SAVE_SUNSCREEN,{sunscreens : result.data})
     }
   },
   async getbabyAction({commit}){
