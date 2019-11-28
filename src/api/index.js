@@ -9,12 +9,13 @@ export const getProduces = () => ajax({
   url:'/produces'
 })
 
-/* 获取分类国家馆详情 */
-/* export const getGuojiaguang = () => ajax({
-  url:'/guojiaguang'
-}) */
-/* 定义发请求的方法 */
-// export const 
+// 获取防晒详情
+export const getSunscreen = () => ajax({
+  url:'/sunscreen'
+})
+
+
+
 
 // 获取母婴分类详情 j
 export const getBaby = ()=>ajax({
