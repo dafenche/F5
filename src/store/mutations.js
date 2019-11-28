@@ -1,8 +1,43 @@
 /* vue中用于直接修改状态的多个方法对象 */
-import { SAVE_NAVLIST,SAVE_PRODUCES,SAVE_BABY,SAVE_SUNSCREEN } from "./mutations.type";
+import {
+  SAVE_TOKEN,
+  SAVE_USER,
+  REMOVE_USER,
+  SAVE_NAVLIST,
+  SAVE_PRODUCES,
+  SAVE_BABY,
+  SAVE_SUNSCREEN,
+  GET_GROUPS,
+  GET_DETAIL_All
+} from './mutations-type'
 
-export default {
-  [SAVE_NAVLIST](state,{data}){
+
+export default{
+  [GET_GROUPS](state, {groups}){
+    state.groups = groups
+  },
+
+  [GET_DETAIL_All](state, {detail_all}){
+    state.detail_all = detail_all
+
+  },
+
+
+
+   [SAVE_USER](state,{user}){
+      state.user=user
+   },
+   [SAVE_TOKEN](state,{token}){
+      state.token=token
+      localStorage.setItem('token_key',token)
+   },
+   [REMOVE_USER](state){
+       state.user={},
+       state.token='',
+       localStorage.removeItem('token_key')
+   },
+
+   [SAVE_NAVLIST](state,{data}){
     state.data = data
   },
   
@@ -20,3 +55,4 @@ export default {
     state.sunscreens = sunscreens
   },
 }
+

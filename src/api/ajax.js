@@ -1,28 +1,48 @@
-/* axios二次封装 */
 import axios from "axios";
-import qs from "qs"; 
+import qs from "qs";
+import router from '../router'
+import { Toast } from "mint-ui";
 
-axios.defaults.baseURL = '/api'
+const instance = axios.create({
+  baseURL:'/api'
+})
 
-//请求拦截器
-axios.interceptors.request.use((config)=>{
-  if(config.method.toUpperCase() === "POST" && config.data instanceof Object){
+instance.interceptors.request.use(config => {
+  if(config.method.toUpperCase() === 'POST' && config.data instanceof Object){
     config.data = qs.stringify(config.data)
+  }
+  let token = localStorage.getItem('token_key')
+  if(config.headers.needToken){
+    if(token){
+      config.headers.authorization = token
+    }else{
+      throw new Error('没有token,请先登录')
+    }
   }
   return config
 })
 
-//响应拦截器
-axios.interceptors.response.use(
-  response=>response.data,
-  (error)=>{
-    if(error.response.status === 404){
-      console.log('请求资源未找到');     
+instance.interceptors.response.use(
+  response => {
+    return response.data
+  }
+  ,
+  error => {
+    console.log(error)
+    if(!error.response){
+      Toast.alert (error.message)
+      router.currentRoute.path !== '/login' && router.replace('/login')
+    }else if(error.response.status === 401){
+      Toast.alert ('登录过期，请重新登录')
+      router.currentRoute.path !== '/login' && router.replace('/login')
+    }else if(error.response.status === 404){
+      Toast.alert ('请求资源未找到')
     }else{
-      console.log('请求失败');
+      Toast.alert ('请求失败1')
     }
-    alert('请求失败')
+    Toast.alert ('请求失败2')
     return new Promise(()=>{})
-  })
+  }
+)
 
-  export default axios
+export default instance
