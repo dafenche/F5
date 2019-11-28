@@ -122,7 +122,7 @@
 
             <li>
               <img
-                src="https://timgs-v1.tongtongmall.com/46dffc7e2ef4463aa7d6b3a1fd90922f?imageView2/4/quality/30"
+                src="https://timgs-v1.tongtongmall.com/38c891b41b61419ea4cc300786c976a9?imageView2/4/quality/30"
                 alt
               />
               <p>日本ANESSA安耐晒香槟色防晒霜 敏感肌可用SPF50+/ PA++++60ml</p>
@@ -135,7 +135,7 @@
 
             <li>
               <img
-                src="https://timgs-v1.tongtongmall.com/46dffc7e2ef4463aa7d6b3a1fd90922f?imageView2/4/quality/30"
+                src="https://timgs-v1.tongtongmall.com/c1f4e57f9046403a918d3f5c76babaed?imageView2/4/quality/30"
                 alt
               />
               <p>日本ANESSA安耐晒香槟色防晒霜 敏感肌可用SPF50+/ PA++++60ml</p>
@@ -148,7 +148,7 @@
 
             <li>
               <img
-                src="https://timgs-v1.tongtongmall.com/46dffc7e2ef4463aa7d6b3a1fd90922f?imageView2/4/quality/30"
+                src="https://timgs-v1.tongtongmall.com/9d91bba85a914a8687e4e03003c72243?imageView2/4/quality/30"
                 alt
               />
               <p>日本ANESSA安耐晒香槟色防晒霜 敏感肌可用SPF50+/ PA++++60ml</p>
@@ -161,7 +161,7 @@
 
             <li>
               <img
-                src="https://timgs-v1.tongtongmall.com/46dffc7e2ef4463aa7d6b3a1fd90922f?imageView2/4/quality/30"
+                src="https://timgs-v1.tongtongmall.com/58dcd130d2bb445990ce50ec678b1f63?imageView2/4/quality/30"
                 alt
               />
               <p>日本ANESSA安耐晒香槟色防晒霜 敏感肌可用SPF50+/ PA++++60ml</p>
@@ -218,10 +218,10 @@ export default {
       Toast("点击按钮");
     },
 
-    onSelect(index) {
-      x = this.index === 1 ? "1" : "2";
-      return x;
-    },
+    // onSelect(index) {
+    //   x = this.index === 1 ? "1" : "2";
+    //   return x;
+    // },
     boBack(path) {
       this.$router.push(path);
     },

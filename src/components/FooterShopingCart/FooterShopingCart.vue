@@ -4,10 +4,10 @@
       <van-goods-action-icon icon="chat-o" text="客服" />
       <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
       <!-- <van-goods-action-icon :icon="like-o" @click="onClickCollect" :class="{active:isCollected}"  /> -->
-      <!-- <van-goods-action-icon :icon="isCollected?'like':'like-o'" @click="onClickCollect"   /> -->
+      <van-goods-action-icon :icon="isCollected?'like':'like-o'" @click="onClickCollect"   />
 
 
-      <van-goods-action-icon icon="like-o" @click="onClickCollect" :class="{active:isCollected}"   />
+      <!-- <van-goods-action-icon icon="like-o" @click="onClickCollect" :class="{active:isCollected}"   /> -->
 
       <!-- <van-goods-action-icon :icon="isCollected?'like':'like-o'" @click="onClickCollect"  /> -->
 
