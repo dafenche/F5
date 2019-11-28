@@ -49,13 +49,13 @@
     bottom 0
     left 0
     width 100%
-    height 50px
+    height 49px
     background pink
     border-top 1px solid #000
     display flex
     .guideItem
       width 25%
-      height 100%
+      height 100%9
       text-align center
       box-sizing border-box
       .Item
