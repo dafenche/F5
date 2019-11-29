@@ -3,7 +3,10 @@ import Goshop from '../pages/Goshop/Goshop.vue'
 import Personal from '../pages/Personal/Personal.vue'
 
 import Home from "../pages/Home/Home.vue"
-import Group from "../pages/Group/Group.vue"
+// import Group from "../pages/Group/Group.vue"
+
+import Group from "../pages/Group/Group.vue";
+
 
 // import ShopCart from "../pages/ShopCart/ShopCart.vue";
 import Classify from "../pages/Classify/Classify.vue";
@@ -37,7 +40,7 @@ export default [
   },
  
   {
-    path:'/group',
+    path: '/group',
     component:Group,
     children: [
       {
@@ -74,6 +77,6 @@ export default [
   },
   {
     path:'/',
-    redirect:'/classify'
+    redirect:'/home'
   },
 ]

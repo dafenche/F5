@@ -1,5 +1,6 @@
 <template>
-  <div id="footerContainer">
+  <div class="height">
+    <div id="footerContainer">
     <div class="guideItem" @click="goPath('/home')">
       <div class="Item" :class="{active:$route.path === '/home'}">
         <van-icon name="wap-home-o" class="icon"/>
@@ -18,8 +19,8 @@
         <span>拼团</span>
       </div>
     </div>
-    <div class="guideItem" @click="goPath('/shopCart')">
-      <div class="Item" :class="{active:$route.path === '/shopCart'}">
+    <div class="guideItem" @click="goPath('/goshop')">
+      <div class="Item" :class="{active:$route.path === '/goshop'}">
         <van-icon name="shopping-cart-o" class="icon"/>
         <span>购物车</span>
       </div>
@@ -30,6 +31,7 @@
         <span>我的</span>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -44,14 +46,17 @@
 </script>
 
 <style scoped lang='stylus' rel='stylesheet/stylus'>
+.height
+  width 100%
+  height 50px
   #footerContainer
     position fixed
     bottom 0
     left 0
     width 100%
     height 49px
-    background pink
-    border-top 1px solid #000
+    background #fff
+    border-top 1px solid #eee
     display flex
     .guideItem
       width 25%

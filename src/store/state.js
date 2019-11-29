@@ -10,5 +10,7 @@ export  default {
   user:{},
   token:'', 
   groups: {}, 
-  detail_all : {}
+  detail_all : {},
+  adlist: {}, // 首页轮播图数据
+  shops: {}, // 商家底部数据
 }

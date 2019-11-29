@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <div class="header">
-     <van-icon name="arrow-left" size='22px' />
+     <van-icon name="arrow-left" size='22px' @click="$router.back()"/>
      <span class="deng">登录</span>
      <span class="zuce">注册</span>
     </div>

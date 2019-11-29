@@ -88,3 +88,11 @@ export const getGroups = () => ajax({
 export const getDetailAll = () => ajax({
 url: '/group/detail'
 })
+
+export const getHomeList = () => ajax({
+  url: '/homeList',
+})
+
+export const getShopList = () => ajax({
+  url: '/shopList',
+})

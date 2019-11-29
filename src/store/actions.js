@@ -5,7 +5,9 @@ import {
   SAVE_BABY,
   SAVE_SUNSCREEN,
   GET_GROUPS,
-  GET_DETAIL_All
+  GET_DETAIL_All,
+  GET_ADLIST,
+  GET_LIST
 } from './mutations-type'
 
 import  {
@@ -15,8 +17,9 @@ import  {
   getBaby,
   getGroups,
   getDetailAll,
-  getSunscreen 
-  
+  getSunscreen ,
+  getHomeList,
+  getShopList
 } from "../api";
 
 
@@ -91,7 +94,26 @@ export default{
     }
   },
 
+  async getHomeListAction({commit}){
+      
+    let result = await getHomeList()
+    
+    if(result.code === 1100){
+      // console.log('222')
+      commit(GET_ADLIST,{adlist:result.data})
+    }
+  }, 
 
+  async getShopListAction({commit}){
+      
+    let result = await getShopList()
+    
+    if(result.code === 1100){
+      // console.log('222')
+      commit(GET_LIST,{shops:result.data})
+      console.log(result.data)
+    }
+  },
 
 }
 

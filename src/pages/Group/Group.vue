@@ -2,9 +2,11 @@
   <div id="groupsContainer">
     <div class="group-center" v-if="$route.path === '/group'">
       <header class="header">
-        <i class="return"><van-icon name="arrow-left"  style="font-size:16px;" /></i>
+        <i class="return"><van-icon name="arrow-left"  style="font-size:16px;" @click="$router.back()"/></i>
+        
         <h1 class="title">拼团中心</h1>
         <i class="home"><van-icon name="description" style="font-size:16px;" /></i>
+        
       </header>
 
       <div class="content-container">
@@ -73,6 +75,9 @@ export default {
   },
   computed : {
     ...mapState({
+
+
+
       groups: state => state.groups, 
     })
 
@@ -80,6 +85,13 @@ export default {
   }
 };
 </script>
+
+     
+
+
+
+
+
 
 
 <style lang="stylus">

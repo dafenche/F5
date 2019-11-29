@@ -8,7 +8,9 @@ import {
   SAVE_BABY,
   SAVE_SUNSCREEN,
   GET_GROUPS,
-  GET_DETAIL_All
+  GET_DETAIL_All,
+  GET_ADLIST,
+  GET_LIST
 } from './mutations-type'
 
 
@@ -54,5 +56,12 @@ export default{
    [SAVE_SUNSCREEN](state,{sunscreens}){
     state.sunscreens = sunscreens
   },
+  [GET_ADLIST](state,{adlist}){
+    state.adlist = adlist 
+  },
+  [GET_LIST](state,{shops}){
+    state.shops = shops
+    console.log(shops)
+  }
 }
 

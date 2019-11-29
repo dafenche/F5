@@ -16,7 +16,7 @@
       <!-- <van-icon name="like" /> -->
 
 
-      <van-goods-action-button type="warning" text="加入购物车" />
+      <van-goods-action-button type="warning" text="加入购物车" @click="$router.push('/goshop')"/>
       
       <van-goods-action-button type="danger" text="立即购买" />
     </van-goods-action>
@@ -45,7 +45,7 @@ export default {
       Toast('点击图标');
     },
     onClickButton() {
-      Toast('点击按钮');
+      Toast('收藏成功');
     },
 
      onClickCollect() {

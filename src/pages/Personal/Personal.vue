@@ -32,7 +32,7 @@
     <van-cell-group>
       <van-cell icon="points" title="我的积分" is-link />
       <van-cell icon="gold-coin-o" title="我的优惠券" is-link />
-      <van-cell icon="gift-o" title="去商城" is-link />
+      <van-cell icon="gift-o" title="去商城" is-link @click="$router.push('./home')"/>
     </van-cell-group>
     <van-button type="danger" @click="haha">退出登录</van-button>
   </div>

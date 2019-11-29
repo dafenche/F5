@@ -3,7 +3,7 @@
     <!-- 头部 -->
     <div class="H">
       <header class="header">
-        <div class="classifyLeft">
+        <div class="classifyLeft" @click="$router.back()">
           <van-icon name="arrow-left" class="icon"/>
         </div>
         <div class="classifyMiddle">
@@ -14,19 +14,19 @@
           <van-icon name="ellipsis" class="icon" @click="toggle"/>
           <div class="jianjian" v-show="isNav"></div>
           <ul class="list" v-show="isNav">
-            <li>
+            <li @click="$router.push('/home')">
               <van-icon name="wap-home-o" class="i"/>
               <span>首页</span>
             </li>
-            <li>
+            <li @click="$router.push('/classify')">
               <van-icon name="coupon-o" class="i"/>
               <span>分类</span>
             </li>
-            <li>
+            <li @click="$router.push('/goshop')">
               <van-icon name="shopping-cart-o" class="i"/>
               <span>购物车</span>
             </li>
-            <li>
+            <li @click="$router.push('/personal')">
               <van-icon name="manager-o" class="i"/>
               <span>我的</span>
             </li>

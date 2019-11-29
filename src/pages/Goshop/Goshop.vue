@@ -27,7 +27,7 @@
       </div>
        <div class="right">
          <p>{{item.title}}</p>
-         <p class="p1">￥ 52元</p>
+         <p class="p1">￥ {{item.price}}元</p>
        </div>
        <div class="zl">
          <span class="remove" @click="delAddCount(false,datas,index)">-</span>

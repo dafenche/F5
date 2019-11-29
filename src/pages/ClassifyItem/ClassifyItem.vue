@@ -28,7 +28,7 @@
         <van-icon name="apps-o" class="pailie"/>
       </li>
     </ul>
-    <div class="shopItem">
+    <div class="shopItem" @click="$router.push('/group/detail')">
       <div class="boldItem" >
         <img src="https://timgs-v1.tongtongmall.com/57bcb5364b27459597bc43985fd4f885?imageView2/4/quality/30/w/200" alt="">
         <div class="ItemText">

@@ -9,12 +9,12 @@ const mutations={
      state.shopcars = shopcars
   },
   [ADD_COUNT](state,{shop}){
-    state.shopcars.push(shop)
+    
     if(shop.count){
       shop.count++
     }else{
       Vue.set(shop,'count',1)
-     
+      state.shopcars.push(shop)
     }
     
   },
